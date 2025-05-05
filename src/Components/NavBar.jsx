@@ -30,8 +30,8 @@ const NavBar = () => {
             <div className='flex justify-center gap-3'>
                 <div className='flex items-center gap-2'>
 
-                    <img className='w-12 rounded-full' src={`${user ? user.photoURL: userIcon}`} alt="" />
-                    <p>{user ? ( <button onClick={handleLogOut} className='btn btn-primary text-white hover:btn-secondary'>Log Out</button>) : 
+                    <img className='w-12 rounded-full' src={`${user ? user.photoURL: userIcon}`} title={user ? user.displayName : 'user'} alt="" />
+                    <p>{user ? ( <button onClick={handleLogOut} className='btn btn-primary text-white hover:btn-secondary '>Log Out</button>) : 
                     
                     (<Link to={'/auth/login'} className='btn btn-primary text-white hover:btn-secondary'>Log In</Link>
                     )}</p>

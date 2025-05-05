@@ -1,6 +1,7 @@
 import React, { use, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
+import GoogleSignIn from '../Provider/GoogleSignIn';
 
 const LogIn = () => {
 
@@ -9,7 +10,7 @@ const LogIn = () => {
   const { signIn } = use(AuthContext)
   const location = useLocation();
   console.log(location);
-const navigate = useNavigate()  
+  const navigate = useNavigate()
   const handleLogIn = (e) => {
     e.preventDefault();
 
@@ -17,10 +18,10 @@ const navigate = useNavigate()
     const email = form.email.value;
     const password = form.password.value
     console.log({ email, password });
-    signIn(email,password).then(result => {
+    signIn(email, password).then(result => {
       const user = result.user
       console.log(user);
-      navigate(`${location.state? location.state : '/'}`)
+      navigate(`${location.state ? location.state : '/'}`)
     })
       .catch((error) => {
         const errorCode = error.code;
@@ -48,9 +49,13 @@ const navigate = useNavigate()
 
             <div><a className="link link-hover">Forgot password?</a></div>
 
-{error &&  <p className='text-red-600'>{error}</p>}
+            {error && <p className='text-red-600'>{error}</p>}
 
             <button type='submit' className="btn btn-primary hover:btn-secondary mt-4">Login</button>
+
+            <p className='text-center font-bold my-2 text-primary'>OR</p>
+
+            <GoogleSignIn></GoogleSignIn>
             <p className='mt-3'>Don't have an account? <Link className='text-primary font-semibold hover:text-secondary' to={'/auth/register'}>Register</Link></p>
           </fieldset>
         </form>
