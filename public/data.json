@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "thumbnail": "https://i.ibb.co.com/Y7pxvwJs/eid-bufe.jpg",
+    "name": "Eid Special Buffet",
+    "category": "Food Festival",
+    "date": "2025-05-10",
+    "location": "Hotel Grand Plaza, Dhaka",
+    "entry_fee": 1200,
+    "description": "Celebrate Eid with a grand feast at Hotel Grand Plaza. The Eid Special Buffet offers a delightful range of traditional and continental dishes perfect for family and friends. Enjoy mouth-watering meals and a festive ambiance for only 1200 BDT."
+  },
+  {
+    "id": 2,
+    "thumbnail": "https://i.ibb.co.com/TD2G34DT/celebraty-iftar.jpg",
+    "name": "Celebrity Iftar Evening",
+    "category": "Social Gathering",
+    "date": "2025-04-05",
+    "location": "Banani Convention Center",
+    "entry_fee": 500,
+    "description": "Break your fast in style with celebrities and influencers at the Celebrity Iftar Evening. Held at the elegant Banani Convention Center, this event offers great food, social interaction, and unforgettable memories at just 500 BDT."
+  },
+  {
+    "id": 3,
+    "thumbnail": "https://i.ibb.co.com/vxrVDxzc/talkshow.jpg",
+    "name": "Youth & Future Talkshow",
+    "category": "Seminar",
+    "date": "2025-06-01",
+    "location": "BRAC Centre Auditorium",
+    "entry_fee": 500,
+    "description": "Join inspiring youth leaders and visionaries at the Youth & Future Talkshow. This seminar aims to explore the challenges and possibilities of tomorrow, with meaningful conversations at the BRAC Centre Auditorium. Entry is just 500 BDT."
+  },
+  {
+    "id": 4,
+    "thumbnail": "https://i.ibb.co.com/xq4JX12m/convocation.jpg",
+    "name": "University Convocation 2025",
+    "category": "Education",
+    "date": "2025-03-20",
+    "location": "Dhaka University Field",
+    "entry_fee": 100,
+    "description": "Celebrate academic excellence at the University Convocation 2025. A proud moment for graduates, families, and faculties alike, this grand event will be held at Dhaka University Field. Entry fee is just 100 BDT."
+  },
+  {
+    "id": 5,
+    "thumbnail": "https://i.ibb.co.com/twB6RTL7/live-piano.jpg",
+    "name": "Live Piano Night",
+    "category": "Music",
+    "date": "2025-05-15",
+    "location": "The Westin Lounge",
+    "entry_fee": 500,
+    "description": "Experience the soothing charm of classical music at Live Piano Night. Set in the serene ambiance of The Westin Lounge, this event promises a magical evening of melodies for only 500 BDT."
+  },
+  {
+    "id": 6,
+    "thumbnail": "https://i.ibb.co.com/k62PD6Yf/event-category.jpg",
+    "name": "Creative Events Expo",
+    "category": "Exhibition",
+    "date": "2025-07-22",
+    "location": "BICC, Dhaka",
+    "entry_fee": 300,
+    "description": "Explore innovation, design, and creativity at the Creative Events Expo. Hosted at BICC, this exhibition brings together thinkers, creators, and trendsetters. Whether you're a professional or curious explorer, enjoy the expo for just 300 BDT."
+  },
+  {
+    "id": 7,
+    "thumbnail": "https://i.ibb.co.com/XZb9W9Dt/jungkook-live.jpg",
+    "name": "Jungkook Virtual Live",
+    "category": "K-pop Virtual Event",
+    "date": "2025-05-25",
+    "location": "Online",
+    "entry_fee": 800,
+    "description": "Join BTS's Jungkook in a thrilling virtual concert experience! Watch him perform live from the comfort of your home. The Jungkook Virtual Live is a must for K-pop fans, with tickets at just 800 BDT."
+  },
+  {
+    "id": 8,
+    "thumbnail": "https://i.ibb.co.com/PHQSwXv/dj-concert.jpg",
+    "name": "Neon Beats DJ Concert",
+    "category": "Concert",
+    "date": "2025-06-12",
+    "location": "Army Stadium, Dhaka",
+    "entry_fee": 1500,
+    "description": "Get ready to party at the Neon Beats DJ Concert! Dance under the stars at Army Stadium with electrifying beats and dazzling lights. An unforgettable concert experience awaits you for 1500 BDT."
+  }
+]
