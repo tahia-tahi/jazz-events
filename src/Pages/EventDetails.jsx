@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLoaderData, useParams } from 'react-router';
 import NavBar from '../Components/NavBar';
+import { toast } from 'react-toastify';
+import { Helmet } from 'react-helmet-async';
 
 const EventDetails = () => {
     const eventData = useLoaderData();
@@ -12,8 +14,14 @@ const EventDetails = () => {
         setDetails(eventDetails);
     }, [eventData, id]);
 
+    const handleReserveSeat= ()=>{
+        toast.success('Reserved Seat Successfully!!')
+    }
+
     return (
         <div className="bg-gray-50 min-h-screen">
+            <Helmet>
+                <title>Details Of Events</title></Helmet>
             <NavBar />
 
             <div className="max-w-6xl mx-auto px-4 py-10">
@@ -53,13 +61,13 @@ const EventDetails = () => {
                     <form className="space-y-4">
                         <div>
                             <label className="block text-gray-700 mb-1">Name</label>
-                            <input type="text" name="name" className="w-full input input-bordered" placeholder="Your Name" />
+                            <input type="text" name="name" className="w-full input input-bordered" placeholder="Your Name" required/>
                         </div>
                         <div>
                             <label className="block text-gray-700 mb-1">Email</label>
-                            <input type="email" name="email" className="w-full input input-bordered" placeholder="Your Email" />
+                            <input type="email" name="email" className="w-full input input-bordered" placeholder="Your Email" required />
                         </div>
-                        <button type="submit" className="btn btn-primary w-full mt-4 hover:btn-secondary">
+                        <button onClick={handleReserveSeat} type="submit" className="btn btn-primary w-full mt-4 hover:btn-secondary">
                             Reserve Seat
                         </button>
                     </form>

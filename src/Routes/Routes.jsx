@@ -9,6 +9,7 @@ import HomeLayout from "../Layout/HomeLayout";
 import EventDetails from "../Pages/EventDetails";
 import PrivateRoute from "../Provider/PrivateRoute";
 import Loading from "../Pages/Loading";
+import MyProfile from "../Pages/MyProfile";
 
 const router = createBrowserRouter([
 
@@ -29,7 +30,9 @@ const router = createBrowserRouter([
 
     {
         path: '/about',
-        Component: About
+        element: <PrivateRoute>
+            <About></About>
+        </PrivateRoute>
     },
     {
         path: '/auth',
@@ -42,7 +45,8 @@ const router = createBrowserRouter([
             {
                 path: '/auth/register',
                 Component: Register
-            }
+            },
+            
 
         ]
     },
@@ -66,6 +70,10 @@ const router = createBrowserRouter([
     {
         path: '/terms&conditions',
         Component: <h1>Terms and cond</h1>
+    },
+    {
+    path:'/myprofile',
+    element:<MyProfile></MyProfile>
     }
 ])
 

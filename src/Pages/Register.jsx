@@ -2,8 +2,10 @@ import React, { use, useState } from 'react';
 import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
 import GoogleSignIn from '../Provider/GoogleSignIn';
-import { FaRegEye } from "react-icons/fa";
-import { FaRegEyeSlash } from "react-icons/fa6";
+
+import ShowHidePassword from '../Components/ShowHidePassword';
+import { toast } from 'react-toastify';
+import { Helmet } from 'react-helmet-async';
 
 
 
@@ -14,7 +16,6 @@ const Register = () => {
     const [nameError, setNameError] = useState("");
     const [passwordError, setPasswordError] = useState('')
 
-    const [showPassword, setShowPassword] = useState(false)
 
 
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
@@ -49,6 +50,8 @@ const Register = () => {
                 const user = result.user;
                 updateUser({ displayName: name, photoURL: photo }).then(() => {
                     setUser({ ...user, displayName: name, photoURL: photo });
+                    toast.success('Register Successfull!!')
+                    
                     navigate('/')
                 })
                     .catch((error) => {
@@ -66,6 +69,9 @@ const Register = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>  Register</title>
+              </Helmet>
             <div className="card bg-base-100 w-full mx-auto max-w-sm shrink-0 shadow-2xl">
                 <form onSubmit={handleRegister} className="card-body">
                     <h1 className="text-3xl text-center text-accent font-bold">Register now!</h1>
@@ -83,19 +89,8 @@ const Register = () => {
                         <label className="label">Photo</label>
                         <input type="text" name='photo' className="input" placeholder="Photo URL" required />
 
-                        <div className='relative'>
-                            <label className="label">Password</label>
-                            <input type={showPassword?'text':'password'} name='password' className="input" placeholder="Password" required />
-                            <button onClick={()=>{setShowPassword(!showPassword)}}
-                            className='text-primary absolute right-8 top-8 '>
-                                {
-                                    showPassword? <FaRegEyeSlash size={15} /> : <FaRegEye size={15}/>
-                                }
-                               
-                            </button>
-                        </div>
+<ShowHidePassword></ShowHidePassword>
 
-                        <div><a className="link link-hover">Forgot password?</a></div>
 
                         <button type='submit' className="btn btn-primary hover:btn-secondary mt-4">Register</button>
                         <p className='text-center font-bold my-2 text-primary'>OR</p>

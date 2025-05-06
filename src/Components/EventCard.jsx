@@ -1,20 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const EventCard = ({events}) => {
-    console.log(events);
-    return (
-        <div className=''>
-            <img className='w-[270px] h-[250px] mb-1 rounded-2xl' src={events.thumbnail} alt="" />
-            <h2 className='text-xl text-accent font-semibold'>{events.name}</h2>
-            <p className=' text-base-300 mt-3'>{events.category}</p>
-            <p className='text-secondary'>{events.date}</p>
-            <p className='text-secondary mb-3'>{events.location}</p>
-            <p className='text-primary font-bold'>{events.entry_fee} tk.</p>
-            <Link to={`/eventdetails/${events.id}`} className='btn btn-primary btn-wide hover:btn-secondary'>View Details</Link>
-            
-        </div>
-    );
+const EventCard = ({ events }) => {
+  return (
+    <div className='bg-white rounded-2xl shadow-md p-4 w-full max-w-xs mx-auto hover:shadow-lg transition duration-300'>
+      <img
+        className='w-full h-[200px] object-cover rounded-xl mb-3'
+        src={events.thumbnail}
+        alt={events.name}
+      />
+      <h2 className='text-lg md:text-xl text-accent font-semibold'>{events.name}</h2>
+      <p className='text-base text-gray-500 mt-1'>{events.category}</p>
+      <p className='text-sm text-secondary'>{events.date}</p>
+      <p className='text-sm text-secondary mb-2'>{events.location}</p>
+      <p className='text-primary font-bold text-md mb-4'>{events.entry_fee} TK</p>
+      <Link
+        to={`/eventdetails/${events.id}`}
+        className='btn btn-primary w-full hover:btn-secondary'
+      >
+        View Details
+      </Link>
+    </div>
+  );
 };
 
 export default EventCard;
