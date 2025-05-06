@@ -3,6 +3,7 @@ import userIcon from '../assets/user.png';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
+import logo from '../assets/j-event.png'
 
 const NavBar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -19,8 +20,12 @@ const NavBar = () => {
   return (
     <nav className="w-full bg-base-100 shadow-md">
       <div className="w-11/12 mx-auto p-4 flex justify-between items-center">
+
+      <div className='flex items-center gap-0' >
+      <img className='w-[50px]' src={logo} alt="" />
+      <h1 className="text-2xl  text-primary font-bold">Jazz Events</h1>
+      </div>
        
-        <h1 className="text-2xl md:text-3xl text-primary font-bold">Jazz Events</h1>
 
         <div className="md:hidden">
           <button onClick={toggleMenu} aria-label="Toggle Menu">
