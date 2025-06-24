@@ -29,7 +29,7 @@ const NavBar = () => {
 
         <div className="md:hidden">
           <button onClick={toggleMenu} aria-label="Toggle Menu">
-            {isMenuOpen ? <HiX size={28} /> : <HiMenuAlt3 size={28} />}
+            {isMenuOpen ? <HiX size={27} /> : <HiMenuAlt3 size={27} />}
           </button>
         </div>
 
