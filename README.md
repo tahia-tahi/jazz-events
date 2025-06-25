@@ -1,5 +1,3 @@
-## 🎷 Jazz Events – Project Overview
----
 
 ## ✨ Key Features
 
